@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+     
+  <title>Register</title>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Konnect',sans-serif;
+}
+body {
+  background:transparent;
+  font-family: 'Konnect',sans-serif;
+  min-height: 90vh;
+}
+img {
+  width: 90%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+  opacity:0.9;
+}
+a {
+  margin-left: 30px;
+  color: #3c63cc;
+  font-weight: 600;
+}
+a:hover {
+  margin-left: 30px;
+  color: #2fa1fd;
+}
+.modernForm {
+  max-width: 1200px;
+  display: flex;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.imageSection {
+  flex-basis: 50%;
+  position: relative;
+  color: white;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  z-index: 0;
+}
+
+.textInside,
+.service {
+  position: absolute;
+}
+.textInside {
+  bottom: 200px;
+  right: 120px;
+}
+.tagLine {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.service {
+  bottom: 30px;
+  right: 50px;
+}
+.service p {
+  font-weight: 700;
+}
+.contactForm {
+  flex-basis: 45%;
+  margin: auto;
+  color: #555;
+  padding-left: 30px;
+}
+.contactForm h1 {
+  padding: 15px 0;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: rgb(177, 177, 177) 1px solid;
+  margin-top: 10px;
+}
+.name {
+  position: relative;
+  margin-bottom: 20px;
+}
+.iconName {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+input[type="submit"] {
+  background-color:#4285F4;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 30px 0;
+  cursor: pointer;
+  float: left;
+}
+input[type="submit"]:hover {
+  background-color: #2fa1fd;
+}
+
+@media only screen and (max-width: 768px) {
+  .modernForm {
+    flex-wrap: wrap;
+  }
+  .imageSection,
+  .contactForm {
+    flex-basis: 100%;
+  }
+  .overlay,
+  img {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .contactForm {
+    padding-right: 30px;
+  }
+}
+
+  </style>
+</head>
+
+  <body>
+    <div class="modernForm">
+      <div class="imageSection">
+        <div class="image">
+          <div class="overlay"></div>
+          <img src="https://media.istockphoto.com/vectors/stealing-data-concept-flat-vector-illustration-online-registration-vector-id1312423107?k=20&m=1312423107&s=612x612&w=0&h=WTnpFbcUNP5q3LTlGUXStU1Nt7RxdHOzBkHbtJOWadw=">
+        </div>
+        <div class="textInside">
+          
+        </div>
+        <div class="service">
+         
+        </div>
+      </div>
+      <div class="contactForm">
+        <h1>Registaration Form</h1>
+        <form>
+          <div class="name">
+            <label for="fullName">Full Name:</label>
+            <input type="text" name="fullName" id="fullName" placeholder="ex: Lindsey Wilson" required/>
+            <div class="iconName"><i class="fas fa-user"></i></div>
+          </div>
+          <div class="name">
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required />
+            <div class="iconName"><i class="fas fa-envelope"></i></i></div>
+          </div>
+          <div class="name">
+            <label for="Password">Password:</label>
+            <input type="password" name="password" id="password" required />
+            <div class="iconName"><i class="fas fa-lock"></i></div>
+          </div>
+          <div class="name">
+            <label for="Password">Confirm Password:</label>
+            <input type="password" name="password" id="password" required />
+            <div class="iconName"><i class="fas fa-lock"></i></div>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="checkbox" name="checkbox" required>
+            <label for="checkbox">By signing up, you agree to the
+             <p><a href="#">Play Term of Service</p></label>
+          </div>
+          <input type="submit" value="Register">
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>

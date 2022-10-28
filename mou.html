@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>KrishTec.com</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href=>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- custom css file link  -->
+<style>
+   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --yellow:#f5bf23;
+  --black:#111;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --border:.1rem solid rgba(0,0,0,.3);
+}
+
+* {
+  font-family: 'Konnect',sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background:green;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+.heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding-left: 1rem;
+  border-left: 1rem solid #FF0000;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: #4F4F4F;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px 50px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  font-size: 15px;
+  
+  margin-left: 80px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  border-radius: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background:red;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.btn:hover {
+  background:red;
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 1.5rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+  background: var(--white);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.header .logo span {
+  color: crimson;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+  margin: 0 1rem;
+  font-family: 'Konnect',sans-serif;
+  font-weight: 400;
+}
+
+.header .navbar a:hover {
+  color:red;
+  text-decoration: overline;
+
+  
+}
+.header .icons div {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: transparent;
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  margin-left: .3rem;
+}
+
+.header .icons div:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70rem;
+  background: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 1rem;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-animation: fadeIn .2s linear;
+          animation: fadeIn .2s linear;
+}
+
+.header .search-form.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .search-form input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: var(--light-bg);
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
+
+.header .search-form label {
+  font-size: 2.5rem;
+  color: var(--black);
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.header .search-form label:hover {
+  color: var(--yellow);
+}
+
+.header .login-form {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40rem;
+  background: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+  -webkit-animation: fadeIn .2s linear;
+          animation: fadeIn .2s linear;
+  display: none;
+}
+
+.header .login-form.active {
+  display: block;
+}
+
+.header .login-form h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.header .login-form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: var(--light-bg);
+  font-size: 1.6rem;
+  color: var(--light-color);
+  margin: .7rem 0;
+}
+
+.header .login-form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.header .login-form .flex label {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+}
+
+.header .login-form .flex a {
+  font-size: 1.5rem;
+  color: #4285F4;
+  margin-left: auto;
+}
+
+.header .login-form .flex a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.header .login-form .btn {
+  width: 100%;
+}
+
+.header .login-form p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding-top: 1.5rem;
+}
+
+.header .login-form p a {
+  color: #4285F4;
+}
+
+.header .login-form p a:hover {
+  text-decoration: underline;
+  color: green;
+}
+.contact-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  background: var(--white);
+  height: 100%;
+  text-align: center;
+  z-index: 1100;
+  padding: 0 2rem;
+  padding-top: 5rem;
+  display: none;
+}
+
+.contact-info.active {
+  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  display: block;
+}
+
+.contact-info #close-contact-info {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.contact-info #close-contact-info:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact-info .info {
+  padding: 2rem 0;
+}
+
+.contact-info .info i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.contact-info .info i:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.contact-info .info h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.contact-info .info p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+.contact-info .share {
+  padding-top: 2rem;
+  border-top: var(--border);
+  margin-top: 1rem;
+}
+
+.contact-info .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  margin: 0 .3rem;
+}
+
+.contact-info .share a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.home {
+  padding: 0;
+}
+
+.home .slide {
+  min-height: 67rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.home .slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(var(--white)), to(transparent));
+  background: linear-gradient(90deg, var(--white), transparent);
+}
+
+.home .slide .content {
+  width: 50rem;
+  position: relative;
+}
+
+.home .slide .content h3 {
+  font-size: 6rem;
+  color: var(--black);
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.home .slide .content p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  left: initial;
+  right: 0;
+  height: 13rem;
+  width: 7rem;
+  line-height: 10rem;
+  background: transparent;
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+  background: transparent;
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after {
+  font-size: 3rem;
+  color: var(--black);
+  font-weight: bolder;
+}
+
+.home .swiper-button-prev {
+  right: 7rem;
+}
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family:  'Konnect',sans-serif;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:transparent;
+  color: red;
+  text-decoration: overline;
+}
+
+.about .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.about .row .video {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.about .row .video video {
+  width: 100%;
+}
+
+.about .row .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 41rem;
+          flex: 1 1 41rem;
+}
+
+.about .row .content h3 {
+  font-size: 3.5rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.about .row .content p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.about .box-container {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.about .box-container .box {
+  text-align: center;
+  background: var(--light-bg);
+  padding: 3rem 2rem;
+}
+
+.about .box-container .box h3 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.about .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+  padding-top: .5rem;
+}
+
+.services {
+  background: white;
+}
+
+.services .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 10rem;
+}
+
+.services .box-container .box {
+  text-align: center;
+  padding: 3rem;
+  background: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border: var(--border);
+
+}
+
+.services .box-container .box:hover img {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.services .box-container .box img {
+  height: 7rem;
+  margin-bottom: .5rem;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.services .box-container .box h3 {
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.services .box-container .box p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+
+.contact .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.contact .row .image{
+  flex:1 1 35rem;
+}
+
+.contact .row .image img{
+  width:100%;
+}
+
+.contact .row form{
+  flex:1 1 50rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:49%;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
+
+.brand-container{
+  text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.book .row .image{
+  flex:1 1 40rem;
+}
+
+.book .row .image img{
+  width:80%;
+}
+
+.book .row form{
+  flex:1 1 35rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+   font-family: 'lora',serif;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+   font-family: 'lora',serif;
+   font-weight: normal;
+}
+
+
+
+.footer-area {
+  background-image: url('https://esriindonesia.co.id/sites/esriindonesia.co.id/files/2019-05/internship-banner-illustration-image.png');
+  background-size: 650px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 40px 0 80px;
+  margin-top: -115px;
+  z-index: -1;
+}
+.footer-area:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #333;
+  opacity: .9;
+  z-index: -1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.single-footer:nth-child(1) {
+  flex-basis: 23%;
+}
+.single-footer h4 {
+  text-transform: none;
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.single-footer h4:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #FF0000;
+  bottom: 0;
+}
+.footer-social {
+  margin-top: 20px;
+}
+.footer-social a {
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer-social a:hover {
+  background-color: #ff660e;
+  border-color: #ff660e;
+}
+.single-footer ul li {
+  text-transform: capitalize;
+  font-size: 14px;
+  border-bottom: 1px dashed #4a4040;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.single-footer ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.single-footer ul li i {
+  margin-right: 5px;
+  font-size: 10px;
+}
+.single-footer ul li a:hover {
+  color: #ff660e;
+}
+
+.footer-bottom-area {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copy p {
+  text-transform: capitalize;
+}
+.footer-menu a {
+  text-transform: capitalize;
+  margin-left: 10px;
+  transition: .3s;
+}
+.footer-menu a:hover {
+  color: #ff660e;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo{
+  font-size: 34px;
+  font-weight: bolder;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+  text-align: justify;
+  text-transform: initial;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+@media only screen and (min-width:992px) and (max-width: 1200px) {
+  .container{
+    width: 970px;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width: 991px) {
+  .container{
+    width: 750px;
+  }
+  .subscribe form {
+    max-width: 600px;
+  }
+  .single-footer {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container{
+    width: 350px;
+  }
+  .subscribe form {
+    max-width: 100%;
+    margin: 0 20px;
+  }
+  .subscribe input[type="submit"] {
+    position: static;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .single-footer, .single-footer:nth-child(1){
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer-menu a {
+    text-transform: capitalize;
+    margin-left: 7px;
+    transition: .3s;
+    font-size: 14px;
+  }
+  .copy p {
+    text-transform: capitalize;
+    margin-top: 15px;
+  }
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .search-form {
+    width: 90%;
+  }
+  .header .login-form {
+    width: 90%;
+  }
+  .home .slide {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .slide .content {
+    text-align: center;
+  }
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .about .row .content h3 {
+    font-size: 2.5rem;
+  }
+ 
+}
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+</style>
+
+</head>
+<body>
+  <div class="loader">
+    <img src="https://preview.redd.it/ounq1mw5kdxy.gif?width=600&s=5b530e7cd463a42738c95ed807acefcb2aa73c4a" alt="Loading..."  /style="width: 290px;">
+</div>
+<script type="text/javascript">
+  window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; // class "loader hidden"
+});
+</script>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <a href="#" class="logo"><img src="1kt.png" style="width:55px; ">
+  
+
+   <nav class="navbar">
+       <a href="#home">home</a>
+      <a href="#about">about</a>
+      <div class="dropdown">
+  <button class="dropbtn" style="font-size: 1.7rem; font-weight: 400; font-family: 'Konnect',sans-serif; ">Product</button>
+  <div class="dropdown-content">
+  <a href="#">Iot</a>
+  <a href="#">Emb Kits</a>
+  <a href="#">ADAS</a>
+  <a href="#">Displays</a>
+</div>
+  
+  </div>
+<a href="mou.html">MOU</a> 
+
+  <a href="">OCC</a>
+  <div class="dropdown">
+  <button class="dropbtn" style="font-size: 1.7rem; font-weight: 400;  font-family: 'Konnect',sans-serif;">Internship</button>
+  <div class="dropdown-content">
+  <div class="tooltip">
+  
+
+  <a href="forgot .html">Industrial</a>
+  <span class="tooltiptext"> Internship - 2nd and third years
+Final Years - 1/ 3 month Project(UG and PG)</span>
+</div>
+  <a href="#">Academic</a>
+  
+  </div>
+</div>
+    
+      
+      <a href="#contact">contact</a>
+          
+     
+     
+   </nav>
+
+   <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="info-btn" class="fas fa-info-circle"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+      <div id="login-btn" class="fas fa-user"></div>
+   </div>
+
+   <form action="" class="search-form">
+      <input type="search" name="" placeholder="search here..." id="search-box">
+      <label for="search-box" class="fas fa-search"></label>
+   </form>
+ <form action="" class="login-form" id="login">
+      <h3>login form</h3>
+      <input type="email" placeholder="enter your email" class="box">
+      <input type="password" placeholder="enter your password" class="box">
+      <div class="flex">
+         <input type="checkbox" name="" id="remember-me">
+         <label for="remember-me">remember me</label>
+         <a href="forgot .html">forgot password?</a>
+      </div>
+      <input type="submit" value="login now" class="btn">
+      <p>don't have an account?<a href="create one.html"> create one</a></p>
+   </form>
+
+
+</header>
+
+<div class="contact-info">
+
+   <div id="close-contact-info" class="fas fa-times"></div>
+
+   <div class="info">
+      <img src="https://www.seekpng.com/png/detail/97-972664_image-transparent-background-white-phone-icon.png" style="width: 60px;">
+      <h3>phone number</h3>
+      
+      <p>04224359250</p>
+   </div>
+
+   <div class="info">
+       <img src="https://png.monster/wp-content/uploads/2020/11/gmail-logo-2020-01-4d7e53f1.png" style="width:120px;">
+      <h3>email address</h3>
+      <p>athivimal@gmail.com</p>
+      
+   </div>
+
+   <div class="info">
+     <img src="https://e7.pngegg.com/pngimages/27/774/png-clipart-google-maps-google-i-o-logo-map-icon-google-map-logo-text-sign.png" style="width:50px;">
+      <h3>office address</h3>
+      <p>286,Thadagam Road,<br>
+Coimbatore, <br>India 641013</p>
+   </div>
+
+   <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+   </div>
+
+</div>
+
+<!-- header section ends -->
+<section class="book" id="canteen">
+
+    <h1 class="heading">
+        <span>MoU Signed With Krishtec</span>
+       
+    </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="https://jssaherstorage.blob.core.windows.net/jssuudstorage/udpimages/mou-agreement.jpg" alt="">
+        </div>
+        <form action="">
+            <div class="inputBox">
+               <a href="https://kitcbe.com/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">.KIT- Kalaignarkarunanidhi Institute of Technology,Coimbatore.</h3></a>  
+                <a href="http://vcenggw.ac.in/" target="blank"><h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">. Vivekanandha College of Engineering for Women, Tiruchengode.        </h3> </a>
+               <a href="http://vcenggw.ac.in/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">.  Vivekanandha College of Technology for Women, Tiruchengode.</h3></a>
+               <a href="https://builderscollege.edu.in/mou/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">. Builders Engineering College, Nathakadaiyur</h3></a>
+               <a href="http://www.gcedpi.edu.in/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">. Government Engineering College, Dharmapuri.</h3></a>
+               <a href="http://scteng.co.in/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">. Sengunthar Engineering College, Tiruchengode.</h3></a>
+               <a href="https://kce.ac.in/profile/" target="blank"> <h3 onMouseOver="this.style.color='crimson'"
+   onMouseOut="this.style.color='#666'">. Karpagam College of Engineering,Coimbatore.</h3></a>
+              
+        </form>
+    </div>
+
+</section>
+<!-- home section starts  -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- home section ends -->
+<!-- home section starts  -->
+
+
+   
+
+<!-- home section ends -->
+
+
+
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer">
+                <div class="single-footer">
+                    <h4>About us</h4>
+                    <p>Developer of IoT-based systems intended to solve environmental challenges and help in industrial and home automation. The company's products include remote ....</p>
+                    <div class="footer-social">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="single-footer">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-right"></i> home</a></li>
+                        <li><a href=""><i class="fa-solid fa-right"></i> about</a></li>
+                        <li><a href=""><i class="fa-solid fa-right"></i>  product</a></li>
+                        <li><a href=""><i class="fa-solid fa-right"></i> Mou</a></li>
+                         <li><a href=""><i class="fa-solid fa-right"></i> Occ</a></li>
+                          <li><a href=""><i class="fa-solid fa-right"></i> training</a></li>
+                        <li><a href=""><i class="fa-solid fa-right"></i> contact</a></li>
+                    </ul>
+                </div>
+                <div class="single-footer">
+                    <h4>Opening hours</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-right"></i> monday: 10.00 am- 5.30 pm</li>
+                        <li><i class="fa-solid fa-right"></i> tuesday: 10.00 am- 5.30 pm</li>
+                        <li><i class="fa-solid fa-right"></i> wednesday: 10.00 am- 5.30 pm</li>
+                        <li><i class="fa-solid fa-right"></i> friday: 10.00 am- 5.30 pm</li>
+                        <li><i class="fa-solid fa-right"></i> saturday: 10:00 am - 5.30 pm</li>
+                        <li><i class="fa-solid fa-right"></i> sunday : closed Day</li>
+                    </ul>
+                </div>
+                <div class="single-footer">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-location-dot"></i> Ist Floor, Sanhasa Square,<br> Bharathi Park,<br> 3rd Cross,<br> Coimbatore-641043.</a></li>
+                        <li><a href="tel:+613 4589 1207"><i class="fa-solid fa-phone"></i> +91 (0) 9894954680</a></li>
+                        <li><a href="milto:info@domainname.com"><i class="fa-solid fa-envelope"></i>director@krishtec.co.in</a></li>
+                        <li><a href=""><i class="fa-solid fa-globe"></i> www.KrishTec.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copy">
+                    <p>&copy; 2022 all rights reserved.</p>
+                </div>
+                <div class="footer-menu">
+                    <a href="">privacy policy</a>
+                    <a href="">terms & conditions</a>
+                    <a href="">disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script >
+   let navbar = document.querySelector('.header .navbar');
+let searchForm = document.querySelector('.header .search-form');
+let loginForm = document.querySelector('.header .login-form');
+let contactInfo = document.querySelector('.contact-info');
+
+document.querySelector('#menu-btn').onclick = () =>{
+   navbar.classList.toggle('active');
+   searchForm.classList.remove('active');
+   loginForm.classList.remove('active');
+};
+
+document.querySelector('#search-btn').onclick = () =>{
+   searchForm.classList.toggle('active');
+   navbar.classList.remove('active');
+   loginForm.classList.remove('active');
+};
+
+document.querySelector('#login-btn').onclick = () =>{
+   loginForm.classList.toggle('active');
+   navbar.classList.remove('active');
+   searchForm.classList.remove('active'); 
+};
+
+document.querySelector('#info-btn').onclick = () =>{
+   contactInfo.classList.add('active');
+}
+
+document.querySelector('#close-contact-info').onclick = () =>{
+   contactInfo.classList.remove('active');
+}
+
+window.onscroll = () =>{
+   navbar.classList.remove('active');
+   searchForm.classList.remove('active');
+   loginForm.classList.remove('active');
+   contactInfo.classList.remove('active');
+}
+
+var swiper = new Swiper(".home-slider", {
+   loop:true,
+   grabCursor:true,
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+});
+
+var swiper = new Swiper(".reviews-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+var swiper = new Swiper(".blogs-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+   },
+});
+
+var swiper = new Swiper(".logo-slider", {
+   loop:true,
+   grabCursor:true,
+   spaceBetween: 20,
+   breakpoints: {
+      450: {
+         slidesPerView: 2,
+       },
+      640: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1000: {
+        slidesPerView: 5,
+      },
+   },
+});
+</script>
+
+<script>
+
+lightGallery(document.querySelector('.projects .box-container'));
+
+</script>
+
+</body>
+</html>
